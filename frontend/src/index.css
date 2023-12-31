@@ -1,0 +1,30 @@
+main {
+  min-height: 80vh;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h1 {
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+}
+h3 {
+  padding: 1rem 0;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
+
+.image-container {
+  width: 200px; /* 设置图片容器的宽度 */
+  height: 200px; /* 设置图片容器的高度 */
+}
+
+.image-container img {
+  width: 100%; /* 图片宽度占据其容器的100% */
+  height: 100%; /* 图片高度占据其容器的100% */
+  object-fit: cover; /* 保持图片的纵横比并覆盖整个容器 */
+}
