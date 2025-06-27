@@ -1,6 +1,6 @@
 ![Open Banner](MERN.png)
 
-# CampusSwap-A Full-stack MERN Website
+# eCommerceHub-A Full-stack MERN Website
 
 ## Project Goal
 Built a custom web application with MERN stack, empowering users to add, edit, and delete items.
