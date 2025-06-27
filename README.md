@@ -19,9 +19,9 @@ Before running the application, ensure you have the following installed:
 *MongoDB
 
 ## Setup
-1.Clone the repository: git clone https://github.com/YirenZhangCS/AI-Powered-eCommerceHub.git
-2.Navigate to the project directory:
-3.Install dependencies for both the client and server:
+*Clone the repository: git clone https://github.com/YirenZhangCS/AI-Powered-eCommerceHub.git
+*Navigate to the project directory:
+*Install dependencies for both the client and server:
 Install frontend dependencies
 cd frontend
 npm install
@@ -30,11 +30,11 @@ Install backend dependencies
 cd backend
 npm install
 
-4.Configure environment variables:
+*Configure environment variables:
 Modify the .env.txt file in the backend directory and add the following variables and rename it to .env:
 ```bash
 OPENAI_API_KEY=your_openai_api_key
 MONGODB_URI=your_mongodb_uri
 ```
-5.Start the application:
+* Start the application:
 npm dev run
