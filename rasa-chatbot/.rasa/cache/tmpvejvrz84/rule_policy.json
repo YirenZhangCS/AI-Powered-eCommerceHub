@@ -1,0 +1,20 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"upload_image\"}}]": "action_check_order_status",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"upload_image\"}}, {\"prev_action\": {\"action_name\": \"action_check_order_status\"}, \"user\": {\"intent\": \"upload_image\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_order_status\"}}]": "utter_ask_order_number",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_order_status\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_order_number\"}, \"user\": {\"intent\": \"ask_order_status\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"order_number\"], \"intent\": \"provide_order_number\"}}]": "action_ask_upload_image",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"order_number\"], \"intent\": \"provide_order_number\"}}, {\"prev_action\": {\"action_name\": \"action_ask_upload_image\"}, \"user\": {\"entities\": [\"order_number\"], \"intent\": \"provide_order_number\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent restart",
+      "predicting default action with intent session_start",
+      "predicting default action with intent back"
+    ]
+  }
+}

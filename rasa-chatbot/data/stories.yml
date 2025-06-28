@@ -1,0 +1,34 @@
+version: "3.1"
+
+
+stories:
+  - story: order status inquiry
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_product_status
+      - action: utter_ask_order_number
+      - intent: provide_product_order_number
+        entities:
+          - order_number: "126898"
+      - action: action_ask_upload_image
+      - intent: upload_product_image
+      - action: action_check_order_status
+
+  - story: order status inquiry with damaged box
+    steps:
+      - intent: ask_box_status
+      - action: utter_ask_order_number
+      - intent: provide_box_order_number
+        entities:
+          - order_number: "126898"
+      - action: action_ask_upload_image
+      - intent: upload_box_image
+      - action: action_check_order_status
+
+  - story: report fraudulent transaction
+    steps:
+      - intent: report_a_fraudulent_transaction
+      - action: action_ask_upload_image
+      - intent: upload_credit_image
+      - action: action_check_order_status

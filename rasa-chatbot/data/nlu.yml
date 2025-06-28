@@ -1,0 +1,52 @@
+version: "3.1"
+
+nlu:
+  - intent: ask_product_status
+    examples: |
+      - I have an issue with my purchased product.
+      - Can you tell me about my order status of a purchased product with a defect.
+      - I want to know the status of my order.
+      - What’s the update on my defective product?
+
+  - intent: ask_box_status
+    examples: |
+      - I also have an issue with the shipping box.
+      - Can you tell me about my order status of a product that was received in a damaged shipping box?
+
+  - intent: report_a_fraudulent_transaction
+    examples: |
+      - I want to report a fraudulent transaction.
+
+  - intent: greet
+    examples: |
+      - hello
+      - hi
+
+  - intent: provide_product_order_number
+    examples: |
+      - My order number is 126898(order_number).
+      - Order number 123456.
+      - The order number is [789012](order_number).
+  
+  - intent: provide_box_order_number
+    examples: |
+      - My order number is [126898](order_number).
+      - Order number 123456.
+      - The order number is [789012](order_number).
+      
+  - intent: upload_image
+    examples: |
+      - Here is the image of product.
+      - Please find the attached image.
+      - Here is the image.
+      
+      
+  - intent: affirm
+    examples: |
+      - Yes
+      - Sure
+      - Of course
+      - Absolutely
+
+
+  

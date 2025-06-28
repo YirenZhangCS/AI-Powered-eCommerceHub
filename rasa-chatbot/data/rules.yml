@@ -1,0 +1,42 @@
+version: "3.1"
+
+rules:
+  - rule: Ask for order number
+    steps:
+      - intent: ask_product_status
+      - action: utter_ask_order_number
+
+  - rule: Provide order number and ask for image
+    steps:
+      - intent: provide_product_order_number
+        entities:
+          - order_number: "126898"  # 示例订单号
+      - action: action_ask_upload_image
+  
+  - rule: Ask for order number for box status
+    steps:
+      - intent: ask_box_status
+      - action: utter_ask_order_number
+
+  - rule: Provide order number for box status and ask for image
+    steps:
+      - intent: provide_box_order_number
+        entities:
+          - order_number: "126898"
+      - action: action_ask_upload_image
+  
+  - rule: Upload product image and check order status
+    steps:
+      - intent: upload_product_image
+      - action: action_check_order_status
+
+  - rule: Upload box image and check order status
+    steps:
+      - intent: upload_box_image
+      - action: action_check_order_status
+  
+  - rule: Upload credit image and check order status
+    steps:
+      - intent: upload_credit_image
+      - action: action_check_order_status
+

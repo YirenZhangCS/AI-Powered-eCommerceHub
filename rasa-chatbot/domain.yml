@@ -1,0 +1,43 @@
+version: "3.1"
+
+intents:
+  - greet
+  - ask_product_status
+  - ask_box_status
+  - report_a_fraudulent_transaction
+  - provide_product_order_number
+  - provide_box_order_number
+  - upload_image
+  - affirm
+
+entities:
+  - order_number
+
+slots:
+  order_number:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+  image:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I help you?" 
+  utter_ask_order_number:
+    - text: "What's your order number?"
+  utter_ask_product_image:
+    - text: "Please upload a related picture of the delivered product."
+  utter_ask_box_image:
+    - text: "Please upload a related picture of the damaged shipping box."
+  utter_ask_fraud_image:
+    - text: "Please upload a related picture of the OCR."
+    
+actions:
+  - action_check_order_status
+  - utter_ask_order_number
+  - action_ask_upload_image
